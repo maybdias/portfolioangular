@@ -36,7 +36,7 @@ jobs:
 
       - name: Build
         working-directory: ./curso-angular-portifolio
-        run: npm run build -- --base-href /PortfolioAngular/
+        run: npm run build -- --base-href /portfolioangular/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
