@@ -41,7 +41,7 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/portfolioangular/"
+              "baseHref": "/PortfolioAngular/"
             },
             "development": {
               "optimization": false,

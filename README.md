@@ -56,15 +56,24 @@ npm run deploy
 Ou usar o Angular CLI diretamente:
 
 ```bash
-ng build --configuration production --base-href /portfolioangular/
+ng build --configuration production --base-href /PortfolioAngular/
 npx angular-cli-ghpages --dir=dist/curso-angular-portifolio/browser
 ```
 
 ### Configuração do GitHub Pages
 
-1. Vá em **Settings** > **Pages** no seu repositório GitHub
-2. Em **Source**, selecione **GitHub Actions**
-3. O site estará disponível em: `https://maybdias.github.io/portfolioangular/`
+**IMPORTANTE:** Para o deploy funcionar, você precisa configurar o GitHub Pages:
+
+1. Acesse: https://github.com/maybdias/PortfolioAngular/settings/pages
+2. Em **Source**, selecione **GitHub Actions** (não "Deploy from a branch")
+3. Salve as configurações
+4. O workflow será executado automaticamente no próximo push ou você pode executá-lo manualmente em **Actions**
+5. O site estará disponível em: `https://maybdias.github.io/PortfolioAngular/`
+
+**Nota:** Se você ainda receber erro 404, verifique:
+- Se o workflow foi executado com sucesso na aba **Actions**
+- Se o GitHub Pages está configurado para usar **GitHub Actions** (não branch)
+- Aguarde alguns minutos após o deploy para o site ficar disponível
 
 ## Running unit tests
 
