@@ -36,6 +36,36 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
+## Deploy to GitHub Pages
+
+Este projeto está configurado para deploy automático no GitHub Pages através do GitHub Actions.
+
+### Deploy Automático
+
+O deploy acontece automaticamente quando você faz push para a branch `main` ou `master`. O workflow está configurado em `.github/workflows/deploy.yml`.
+
+### Deploy Manual
+
+Para fazer deploy manual, você pode usar:
+
+```bash
+npm run build:gh-pages
+npm run deploy
+```
+
+Ou usar o Angular CLI diretamente:
+
+```bash
+ng build --configuration production --base-href /portfolioangular/
+npx angular-cli-ghpages --dir=dist/curso-angular-portifolio/browser
+```
+
+### Configuração do GitHub Pages
+
+1. Vá em **Settings** > **Pages** no seu repositório GitHub
+2. Em **Source**, selecione **GitHub Actions**
+3. O site estará disponível em: `https://maybdias.github.io/portfolioangular/`
+
 ## Running unit tests
 
 To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
